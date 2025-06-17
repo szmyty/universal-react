@@ -1,7 +1,8 @@
 // Route used after completing the OIDC login flow.
 import { createRoute } from "@tanstack/react-router";
 import { rootRoute } from "./index";
-import { ComponentType, lazy, Suspense } from "react";
+import type { ComponentType } from "react";
+import { lazy, Suspense } from "react";
 import { PageLoader } from "@universal/components";
 
 const LazyCallback = lazy(() =>

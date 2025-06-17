@@ -81,23 +81,47 @@ define(['./workbox-c6c6fb7c'], (function (workbox) { 'use strict';
    * See https://goo.gl/S9QRab
    */
   workbox.precacheAndRoute([{
-    "url": "assets/main-DDdSLmMx.js",
+    "url": "assets/About-CkcQMGtd.js",
     "revision": null
   }, {
-    "url": "assets/main-DzayYLQS.css",
+    "url": "assets/Admin-6L-GGg3f.js",
+    "revision": null
+  }, {
+    "url": "assets/Callback-BBqqAt_r.js",
+    "revision": null
+  }, {
+    "url": "assets/clsx-B-dksMZM.js",
+    "revision": null
+  }, {
+    "url": "assets/FloatingTanStackRouterDevtools-BtOXMvuH.js",
+    "revision": null
+  }, {
+    "url": "assets/Home-BwUJtlz4.js",
+    "revision": null
+  }, {
+    "url": "assets/main-Ch87Rj2V.css",
+    "revision": null
+  }, {
+    "url": "assets/main-DEurE1QZ.js",
+    "revision": null
+  }, {
+    "url": "assets/NotFound-C4fZJ0Az.js",
+    "revision": null
+  }, {
+    "url": "assets/SuperAdmin-CVtRZC-C.js",
     "revision": null
   }, {
     "url": "assets/vendor-CLyQEj53.js",
     "revision": null
   }, {
     "url": "index.html",
-    "revision": "f88f56b64e78284533b113f7dc8a7183"
+    "revision": "daef171aa169a5a53aa0afc5665fa771"
   }, {
     "url": "registerSW.js",
     "revision": "1872c500de691dce40960bb85481de07"
   }, {
     "url": "stats.html",
-    "revision": "5c793d52ee40faf1e897d7e98ec5258a"
+    "revision": "ff138a50b9b0a8346b5fa249b33a7ea0"
   }, {
     "url": "vendor/css/mapbox-gl.css",
     "revision": "4e32dfebe9cc16b5fc92f8b14a3add23"
