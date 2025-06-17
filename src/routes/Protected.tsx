@@ -1,7 +1,8 @@
 // A wrapper component that protects child routes based on auth and roles.
+import React from "react";
 import { Navigate } from "@tanstack/react-router";
 import { useAuth } from "@universal/auth";
-import { UserRole } from "@universal/models";
+import type { UserRole } from "@universal/models";
 
 export type ProtectedProps = {
   roles?: UserRole[] | string[];

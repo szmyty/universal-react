@@ -1,3 +1,4 @@
+import React from "react";
 import { AuthProvider as OIDCProvider } from "react-oidc-context";
 import { oidcConfig } from "@universal/auth";
 

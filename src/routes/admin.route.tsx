@@ -5,9 +5,10 @@ import type { ComponentType } from "react";
 import { lazy, Suspense } from "react";
 import Protected from "./Protected";
 import { PageLoader } from "@universal/components";
+import type { FC } from "react";
 
 const LazyAdmin = lazy(() =>
-  import("../pages/Admin.js").then((mod) => mod as unknown as { default: ComponentType<any> })
+  import("../pages/Admin.js").then((mod) => mod as unknown as { default: ComponentType<FC> })
 );
 
 export const adminRoute = createRoute({

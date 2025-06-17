@@ -42,7 +42,7 @@ export default defineConfig({
         svgr(),
         envCompatible(),
         eslint({
-            overrideConfigFile: path.resolve(__dirname, ".eslint.config.mjs"),
+            overrideConfigFile: path.resolve(__dirname, "eslint.config.mjs"),
             include: ["src/**/*.ts", "src/**/*.tsx"],
             cacheLocation: "node_modules/.cache/eslint",
             cache: true,

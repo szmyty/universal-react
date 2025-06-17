@@ -4,9 +4,10 @@ import { rootRoute } from "./index";
 import type { ComponentType } from "react";
 import { lazy, Suspense } from "react";
 import { PageLoader } from "@universal/components";
+import type { FC } from "react";
 
 const LazyCallback = lazy(() =>
-  import("../pages/Callback.js").then((mod) => mod as unknown as { default: ComponentType<any> })
+  import("../pages/Callback.js").then((mod) => mod as unknown as { default: ComponentType<FC> })
 );
 
 export const callbackRoute = createRoute({

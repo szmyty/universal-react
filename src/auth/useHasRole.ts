@@ -2,7 +2,7 @@
 // Utility hooks for checking user roles and groups.
 
 import { useAuth } from "./useAuth";
-import { UserRole } from "@universal/models/user";
+import type { UserRole } from "@universal/models/user";
 
 /**
  * Returns true if the current user has any of the required roles.

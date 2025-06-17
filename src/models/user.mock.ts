@@ -1,5 +1,6 @@
 // models/user.mock.ts
-import { UserProfile, UserRole } from "./user";
+import type { UserProfile} from "./user";
+import { UserRole } from "./user";
 
 export const mockUser: UserProfile = {
     sub: "mock-user-id",

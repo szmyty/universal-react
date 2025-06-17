@@ -1,9 +1,10 @@
 // src/auth/useAuth.ts
 import { useContext } from "react";
 import { AuthContext } from "react-oidc-context";
-import { useMockAuth, AuthContextValue } from "./MockAuthProvider";
+import type { AuthContextValue } from "./MockAuthProvider";
+import { useMockAuth } from "./MockAuthProvider";
 import { isAuthEnabled } from "@universal/config";
-import { UserProfile } from "@universal/models";
+import type { UserProfile } from "@universal/models";
 
 /**
  * Returns the unified auth context depending on environment config.

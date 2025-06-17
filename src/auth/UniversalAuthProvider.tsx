@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import { isAuthEnabled } from "@universal/config";
 import { AuthProvider, MockAuthProvider } from "@universal/auth";
 

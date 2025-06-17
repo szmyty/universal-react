@@ -1,41 +1,54 @@
-// .eslint.config.mjs
-import eslintPluginReact from "eslint-plugin-react";
-import eslintPluginTs from "@typescript-eslint/eslint-plugin";
-import parserTs from "@typescript-eslint/parser";
+import { defineConfig, globalIgnores } from "eslint/config";
+import js from "@eslint/js";
+import tseslint from "@typescript-eslint/eslint-plugin";
+import tsparser from "@typescript-eslint/parser";
+import react from "eslint-plugin-react";
 import globals from "globals";
 
-export default [
+export default defineConfig([
+    // 🔧 Labelled global ignores
+    globalIgnores(
+        [
+            "**/node_modules/**",
+            "**/dist/**",
+            "**/.cache/**",
+            "**/.history/**",
+            "**/.vscode/**",
+            "**/coverage/**",
+        ],
+        "Ignore build and cache artifacts"
+    ),
+
+    js.configs.recommended,
+
     {
         files: ["**/*.{ts,tsx}"],
-        ignores: ["node_modules", "dist", "coverage", ".cache", "*.config.*"],
         languageOptions: {
-            parser: parserTs,
+            parser: tsparser,
             parserOptions: {
                 ecmaVersion: "latest",
                 sourceType: "module",
-                ecmaFeatures: { jsx: true },
                 project: "./tsconfig.eslint.json",
+                ecmaFeatures: { jsx: true },
             },
             globals: {
                 ...globals.browser,
                 ...globals.node,
+                ...globals.vitest,
             },
         },
         plugins: {
-            react: eslintPluginReact,
-            "@typescript-eslint": eslintPluginTs,
+            "@typescript-eslint": tseslint,
+            react,
         },
         rules: {
-            // Base
-            "no-unused-vars": "off",
+            ...tseslint.configs.recommended.rules,
             "@typescript-eslint/no-unused-vars": [
                 "warn",
                 { argsIgnorePattern: "^_" },
             ],
             "@typescript-eslint/consistent-type-imports": "warn",
-
-            // React
-            "react/react-in-jsx-scope": "off", // Not needed with automatic JSX
+            "react/react-in-jsx-scope": "off",
             "react/jsx-uses-react": "off",
             "react/jsx-boolean-value": "warn",
             "react/self-closing-comp": "warn",
@@ -46,4 +59,4 @@ export default [
             },
         },
     },
-];
+]);

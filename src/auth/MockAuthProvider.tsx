@@ -1,6 +1,7 @@
 import { createContext, useContext } from "react";
 import type { ReactNode } from "react";
-import { mockUser, UserProfile } from "@universal/models";
+import type { UserProfile } from "@universal/models";
+import { mockUser } from "@universal/models";
 
 // Shared type for real and mock auth
 export type AuthContextValue = {

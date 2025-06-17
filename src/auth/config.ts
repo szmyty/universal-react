@@ -1,5 +1,5 @@
 // Configuration passed to `react-oidc-context` for Keycloak.
-import { AuthProviderProps } from "react-oidc-context";
+import type { AuthProviderProps } from "react-oidc-context";
 
 export const oidcConfig: AuthProviderProps = {
     authority: import.meta.env.VITE_KEYCLOAK_URL,
