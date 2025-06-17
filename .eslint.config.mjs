@@ -7,13 +7,14 @@ import globals from "globals";
 export default [
     {
         files: ["**/*.{ts,tsx}"],
+        ignores: ["node_modules", "dist", "coverage", ".cache", "*.config.*"],
         languageOptions: {
             parser: parserTs,
             parserOptions: {
                 ecmaVersion: "latest",
                 sourceType: "module",
                 ecmaFeatures: { jsx: true },
-                project: "./tsconfig.json", // optional, if using rules requiring type info
+                project: "./tsconfig.eslint.json",
             },
             globals: {
                 ...globals.browser,
