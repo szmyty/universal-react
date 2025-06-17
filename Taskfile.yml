@@ -1,0 +1,11 @@
+---
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+# Taskfile for managing development tasks in a multi-platform environment
+
+version: "3"
+
+tasks:
+  hello:
+    desc: "Prints a hello world message"
+    cmds:
+      - echo "Hello, World!"
