@@ -54,7 +54,7 @@ tasks:
   verify-lockfile:
     desc: "Dry-run to verify lockfile and package.json are in sync"
     cmds:
-      - pnpm install --frozen-lockfile --dry-run
+      - pnpm install --frozen-lockfile
 
   # ─────────────────────────────────────────────────────────────
   # Misc
