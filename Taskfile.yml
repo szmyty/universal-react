@@ -4,7 +4,62 @@
 
 version: "3"
 
+env:
+  NODE_ENV: development
+
 tasks:
+  # ─────────────────────────────────────────────────────────────
+  # Core Developer Workflows
+  # ─────────────────────────────────────────────────────────────
+
+  dev:
+    desc: "Start Vite development server"
+    cmds:
+      - pnpm dev
+
+  build:
+    desc: "Build the production frontend"
+    cmds:
+      - pnpm build
+
+  typecheck:
+    desc: "Run full type checking using tsconfig.typecheck.json"
+    cmds:
+      - tsc --noEmit -p tsconfig.typecheck.json
+
+  lint:
+    desc: "Run ESLint across the codebase"
+    cmds:
+      - pnpm lint
+
+  format:
+    desc: "Format code with Prettier"
+    cmds:
+      - pnpm format
+
+  # ─────────────────────────────────────────────────────────────
+  # Dependency Management
+  # ─────────────────────────────────────────────────────────────
+
+  install:
+    desc: "Install dependencies using a frozen lockfile (CI-safe)"
+    cmds:
+      - pnpm install --frozen-lockfile
+
+  lock:
+    desc: "Update the lockfile only (without installing)"
+    cmds:
+      - pnpm install --lockfile-only
+
+  verify-lockfile:
+    desc: "Dry-run to verify lockfile and package.json are in sync"
+    cmds:
+      - pnpm install --frozen-lockfile --dry-run
+
+  # ─────────────────────────────────────────────────────────────
+  # Misc
+  # ─────────────────────────────────────────────────────────────
+
   hello:
     desc: "Prints a hello world message"
     cmds:
